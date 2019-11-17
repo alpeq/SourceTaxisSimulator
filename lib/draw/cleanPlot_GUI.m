@@ -1,6 +1,9 @@
 function [] = cleanPlot_GUI(plotHandles)
-% Due to representation with the images the input parameter is tipL and
-% tipR which will be processed like the other way around
+% CLEANPLOT_GUI Deletes all the handlers 
+% 
+%   cleanPlot_GUI(plotHandles)
+%   -> plotHandles: list of handlers to delete
+%
 
 
 for i=1:numel(plotHandles)

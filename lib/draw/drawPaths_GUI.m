@@ -1,9 +1,17 @@
 function [pHandles] =  drawPaths_GUI(Path, drawHandle, source)
+% DRAWPATHS_GUI Draw the trajectory of a full simulation
+%
+%   drawPaths_GUI(Path, drawHandle, source)
+%   -> Path: array of positions (x,y,theta)
+%   -> drawHandle: handler to draw the trajectory
+%   -> source: source position, for directness purpose
+%
 
 pHandles = [];
 for i=0:(size(Path,2)/3)-1
+    %% Plot paths in drawhandle
     p1 = plot(drawHandle, Path(:,1+3*i), Path(:,2+3*i),'wo','MarkerSize',1);
-   % p2 = plot(drawHandle, Path(:,1+3*i), Path(:,2+3*i),'w','LineWidth',0.1);
+    % p2 = plot(drawHandle, Path(:,1+3*i), Path(:,2+3*i),'w','LineWidth',0.1);
     h1 = plot(drawHandle, Path(1,1+3*i), Path(1,2+3*i),'rs','MarkerSize',20);
     %h2 = plot(drawHandle, Path(end,1+3*i), Path(end,2+3*i),'yo','MarkerSize',10);
     %h3 = plot(drawHandle, source(1), source(2),'b*','MarkerSize',20);

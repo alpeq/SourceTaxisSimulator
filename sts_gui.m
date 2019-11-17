@@ -806,12 +806,13 @@ function hyperref_ButtonDownFcn(hObject, eventdata, handles)
 % hObject    handle to hyperref (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
-disp('<a href = "ftp://ftp.mathworks.com">The MathWorks FTP Site</a>')
-
+disp('<a href = "https://github.com/alpeq/SourceTaxisSimulator">Github repository: https://github.com/alpeq/SourceTaxisSimulator</a>')
+%disp('Github repository: https://github.com/alpeq/SourceTaxisSimulator</a>')
 
 % --- Executes during object creation, after setting all properties.
 function hyperref_CreateFcn(hObject, eventdata, handles)
 % hObject    handle to hyperref (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
-disp('<a href = "ftp://ftp.mathworks.com">STS Github</a>')
+disp('<a href = "https://github.com/alpeq/SourceTaxisSimulator">Github repository: https://github.com/alpeq/SourceTaxisSimulator</a>')
+%disp('Github repository: https://github.com/alpeq/SourceTaxisSimulator')

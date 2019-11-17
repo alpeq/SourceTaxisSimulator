@@ -1,9 +1,9 @@
 function [PointsL,PointsR, TipL, TipR]=forwardKinematics(posCroach, osciTipL, osciTipR, model, antennae)
-% Position vector contains: 
-% Vector x,y(cm) ,rotation  of cockroach (encoded to 1 2 3 4 5 6 7 8 ) -> we will address that
-% Angles of antennae l,r (grad) with respect of 0 as the parallel with the body
-% position NOT
-% oscitip (1):l (2):r
+% FORWARDKINEMATICS obtained the position of the tip of the antennae based 
+% on the state of the antennae in the oscillator
+%
+% forwardKinematics(posCroach, osciTipL, osciTipR, model, antennae)
+
 
 l1 = model.l1;
 l2 = model.l2;
@@ -21,18 +21,12 @@ x1 = posCroach(1);
 y1 = posCroach(2);
 theta1 = posCroach(3); 
 
-%thetaL = Position(4); % Most likely we need to traslate from the value of the antennae (-1,1) to the radians here
-%thetaR = Position(5); 
-
-
-
 
 Xl =x1 + l1 * cos(theta0 + theta1) + l2 * cos(theta0 + theta1 + theta12l) + l3 * cos(theta0 + theta1 + theta3l); % compute x coordinates
 Yl =y1 + l1 * sin(theta0 + theta1) + l2 * sin(theta0 + theta1 + theta12l) + l3 * sin(theta0 + theta1 + theta3l); % compute y coordinates
 
 Xr =x1 + l1 * cos(theta0 + theta1) + l2 * cos(theta0 + theta1 + theta12r) + l3 * cos(theta0 + theta1 + theta3r); % compute x coordinates
 Yr =y1 + l1 * sin(theta0 + theta1) + l2 * sin(theta0 + theta1 + theta12r) + l3 * sin(theta0 + theta1 + theta3r); % compute y coordinates
-
 
 PointsL = [Xl' Yl'];
 PointsR = [Xr' Yr'];
@@ -51,7 +45,6 @@ try
 catch
     angR = theta3r(1);
 end
-
 
 
 
@@ -75,17 +68,5 @@ tr_y =y1 + l1 * sin(theta0 + theta1) + l2 * sin(theta0 + theta1 + theta12r) + l3
 
 TipL = [tl_x tl_y]; % It supposed to be one point
 TipR = [tr_x tr_y];
-
-%Example positions
-% figure % Without figure it will plot into the drawCroach figure
-% plot(Xl(:),Yl(:),'r.');
-% hold on
-% plot(Xr(:),Yr(:),'b.');
-% 
-% axis equal;
-% xlabel('X','fontsize',10)
-% ylabel('Y','fontsize',10)
-% legend ('left','right')
-% title('X-Y coordinates generated for all theta1 and theta2 combinations using forward kinematics formula','fontsize',10) % create x-y-theta2 dataset
 
 end

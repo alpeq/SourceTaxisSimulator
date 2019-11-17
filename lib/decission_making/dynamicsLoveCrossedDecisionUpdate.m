@@ -1,12 +1,36 @@
-function [croachPos] = dynamicsLoveCrossedDecisionUpdate(croachPos, inL, deL, inR, deR, normOdorL, normOdorR, alpha, sM, kI, kD, kN)
+function [croachPos] = dynamicsLoveCrossedDecisionUpdate(croachPos, inL, deL, inR, deR, normOdourL, normOdourR, alpha, sM, kI, kD, kN)
+% DYNAMICSLOVECROSSEDDECISIONUPDATE stimulus sensory-motor connection and 
+% agent update based on differential drive model.
+%
+%   Sensory-motor connection Braitenberg dynamic type 3 Love 
+%   v = alpha*( SM - kN*contribution) 
+%   contributionLEFT = kI*inRIGHT + kD*decreasesRIGHT + kN*normOdorLEFT;
+%   contributionRIGHT = kI*increasesLEFT + kD*deLEFT + kN*normOdorRIGHT;
+%   dynamicsLoveCrossedDecisionUpdate(croachPos, inL, deL, inR, deR, 
+%                           normOdorL, normOdorR, alpha, sM, kI, kD, kN)
+%   -> croachPos: inital position
+%   -> normOdourL: odour concentration from left sensory appendage
+%   -> normOdourR: odour concentration from right sensory appendage
+%   -> alpha: velocity scaling factor
+%   -> sM: maximun sensory value of the value
+%   -> kI: ON neuron, increase stimulus scaling factor
+%   -> kD: OFF neuron, decreases stimulus scaling factor
+%   -> kN: stimulus scaling factor
+%   <- croachPos: new position in time
+%
+% See also: braitenbergDecisionUpdate, braitenbergLoveDecisionUpdate,
+% dynamicsDecsionUpdate, dynamicsLoveDecisionUpdate, 
+% dynamicsLoveCrossedDecsionUpdate
+%
+
 global model
 global endT
 
 g = sM * endT;
 
 
-contributionL = kI*inR + kD*deR + kN*normOdorL;
-contributionR = kI*inL + kD*deL + kN*normOdorR;
+contributionL = kI*inR + kD*deR + kN*normOdourL;
+contributionR = kI*inL + kD*deL + kN*normOdourR;
 
 
 % Braitenberg model 3: Love

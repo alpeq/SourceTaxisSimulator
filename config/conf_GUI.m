@@ -1,9 +1,7 @@
-%******************************************%
-% Configuration Parameters                 %
-% * Simulation parameters                  %
-% * Cockroach Forward Kinematic values     %
-% * Source in (0.33 , 1)                   %
-%******************************************%
+% CONF_GUI Configuration Parameters                 
+% 	Fixed simulation parameters  
+%   and forward kinematic agent values     
+          
 
 global model
 global antennae

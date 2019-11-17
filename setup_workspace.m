@@ -1,4 +1,7 @@
+%   SETUP_WORKSPACE Setups the workspace
+%
 clc;clear all;close all
+
 addpath(genpath('config'))
 addpath(genpath('Figures'))
 addpath(genpath('lib'))

@@ -1,6 +1,7 @@
 function [ direct_v ] = get_directness( Path, Source )
-%UNTITLED Summary of this function goes here
-%   Detailed explanation goes here
+% GET_DIRECTNESS get the value of the directness_plot from the trajectory of
+% the agent
+%
 
 direct_v = [];
 for i=0:(size(Path,2)/3)-1

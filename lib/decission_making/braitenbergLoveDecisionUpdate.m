@@ -1,12 +1,29 @@
-function [croachPos] = braitenbergLoveDecisionUpdate(croachPos, odorL, odorR, alpha, sM, kN)
+function [croachPos] = braitenbergLoveDecisionUpdate(croachPos, odourL, odourR, alpha, sM, kN)
+% BRAITENBERGLOVEDECISIONUPDATE stimulus sensory-motor connection and agent
+% update based on differential drive model.
+%
+%   Sensory-motor connection Braitenberg type 3 Love 
+%   v = alpha*( SM - kN*odour) 
+%   braitenbergLoveDecisionUpdate(croachPos, odorL, odorR, alpha, sM, kN)
+%   -> croachPos: inital position
+%   -> odourL: odour concentration from left sensory appendage
+%   -> odourR: odour concentration from right sensory appendage
+%   -> alpha: velocity scaling factor
+%   -> sM: maximun sensory value of the value
+%   -> kN: stimulus scaling factor
+%   <- croachPos: new position in time
+%
+% See also: braitenbergDecisionUpdate, dynamicsDecsionUpdate,
+% dynamicsLoveDecisionUpdate, dynamicsLoveCrossedDecsionUpdate
+%
 global model
 global endT
 
 g = sM * endT;
 
 
-contributionL = kN*odorL;
-contributionR = kN*odorR;
+contributionL = kN*odourL;
+contributionR = kN*odourR;
 
 
 % Braitenberg model 3: Love

@@ -1,8 +1,10 @@
 function drawLastFile_GUI(nameExp)
-% Retrieve the last file with the name of the Experiment and print the
+% DRAWLASTFILE_GUI Retrieve the last file with the name of the Experiment and print the
 % trajectory and the directness plot in a file in Figures/
-global Source
-global map_mean
+%
+%   drawLastFile_GUI(name)
+%   -> name: name of the last figure store in /MatrixD
+%
 
 % Save Figures Fig
 dirFig = 'Figures/';
