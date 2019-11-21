@@ -121,6 +121,7 @@ for i= 0:N-2
 end
 
 % Save trayectory mat for plotting
+if ~exist(dirMat,'dir') mkdir(dirMat); end
 fileName = fullfile(dirMat,strcat(xname,datestr(now,'yyyymmddTHHMMss')));
 save(fileName)
 

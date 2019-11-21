@@ -98,7 +98,7 @@ handles.position = struct;
 handles.noise = struct;
     handles.noise.bool = 0;
 
-   
+disp('<a href = "https://github.com/alpeq/SourceTaxisSimulator">Github repository: https://github.com/alpeq/SourceTaxisSimulator</a>')   
     
 % Update handles structure
 guidata(hObject, handles);
@@ -806,7 +806,7 @@ function hyperref_ButtonDownFcn(hObject, eventdata, handles)
 % hObject    handle to hyperref (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
-disp('<a href = "https://github.com/alpeq/SourceTaxisSimulator">Github repository: https://github.com/alpeq/SourceTaxisSimulator</a>')
+%disp('<a href = "https://github.com/alpeq/SourceTaxisSimulator">Github repository: https://github.com/alpeq/SourceTaxisSimulator</a>')
 %disp('Github repository: https://github.com/alpeq/SourceTaxisSimulator</a>')
 
 % --- Executes during object creation, after setting all properties.
@@ -814,5 +814,5 @@ function hyperref_CreateFcn(hObject, eventdata, handles)
 % hObject    handle to hyperref (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
-disp('<a href = "https://github.com/alpeq/SourceTaxisSimulator">Github repository: https://github.com/alpeq/SourceTaxisSimulator</a>')
+%disp('<a href = "https://github.com/alpeq/SourceTaxisSimulator">Github repository: https://github.com/alpeq/SourceTaxisSimulator</a>')
 %disp('Github repository: https://github.com/alpeq/SourceTaxisSimulator')
