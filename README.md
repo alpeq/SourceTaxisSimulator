@@ -1,3 +1,5 @@
+![Image description](img/sts_screen.png)
+
 # SourceTaxisSimulator
 
 
