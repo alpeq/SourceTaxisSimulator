@@ -248,42 +248,42 @@ switch str{val};
         x=linspace(5.5,-6.5); % Original 2,-3 0,12
         offset = 0;
         dynamic = 0;
-    case {'CFD1'}
+    case {'CFD Flow 1'}
         map.string= 'CFD1';
         str_map = load('odormap1_CFD_long.mat');
         Source = [0 0 pi/2]; %-0.5
         x=linspace(6,-6); % Original 2,-3 0,12
         offset = 0;
         dynamic = 0;
-    case {'CFD2'}
+    case {'CFD Flow 2'}
         map.string= 'CFD2';
         str_map = load('odormap2_CFD_long.mat');
         Source = [0 0 pi/2]; %-0.5
         x=linspace(6,-6); % Original 2,-3 0,12
         offset = 0;
         dynamic = 0;
-    case {'Gaden1'}
+    case {'Incompressible '}
         map.string= 'standard300';
         str_map = load('standard300_iteration_10.mat');
         Source = [0 0 pi/2]; %-0.5        
         x=linspace(6,-6); % Original 2,-3 0,12
         offset = 10;
         dynamic = 1;
-    case {'Gaden2'}
+    case {'Compressible '}
         map.string= 'standard_111_v3';
         str_map = load('standard_111_v3_iteration_10.mat');
         Source = [0 0 pi/2]; %-0.5        
         x=linspace(6,-6); % Original 2,-3 0,12
         offset = 10;
         dynamic = 1;
-    case {'Gaden3'}
+    case {'Compressible Obs.'}
         map.string= 'hole_88_v3';
         str_map = load('hole_88_v3_iteration_10.mat');
         Source = [0 0 pi/2]; %-0.5        
         x=linspace(6,-6); % Original 2,-3 0,12
         offset = 10;
         dynamic = 1;   
-    case {'Gaden4'}
+    case {'Compressible Obs. Vis.'}
         map.string= 'hole_300_v3';
         str_map = load('hole_300_v3_iteration_40.mat');
         Source = [0 0 pi/2]; %-0.5        
