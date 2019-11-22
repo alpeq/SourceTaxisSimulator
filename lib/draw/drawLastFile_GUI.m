@@ -53,7 +53,7 @@ polarplot(v_avg, 'Color', [0 0 0], 'Marker','x', 'MarkerSize', 10, 'LineWidth', 
 rlim([0.5 1])
 set(gca, 'linewidth', 2,'fontsize',16, 'fontWeight', 'bold') % Sets the width of set(gca,'linewidth', 2,'fontsize',12, 'fontWeight', 'bold')
 
-if ~exist(dirFig,'dir') mkdir(dirFig); end
+if ~isdir(dirFig) mkdir(dirFig); end
 fullFileNameEpsc = fullfile(dirFig, strcat(lastName,'_path.eps'));
 saveas(FPath, fullFileNameEpsc,'epsc');
 close(FPath);

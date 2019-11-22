@@ -283,7 +283,7 @@ switch str{val};
         x=linspace(6,-6); % Original 2,-3 0,12
         offset = 10;
         dynamic = 1;   
-    case {'Compressible Obs. Vis.'}
+    case {'Compressible Obs. Vis'}
         map.string= 'hole_300_v3';
         str_map = load('hole_300_v3_iteration_40.mat');
         Source = [0 0 pi/2]; %-0.5        
